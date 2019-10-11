@@ -37,9 +37,8 @@ def register():
 
 # this is for email error
     if email != "":
-        if not 20 >= len(email) >= 3 or " " in email or email.count("@") >= 1 or email.count(".") >= 1:
+        if not 20 >= len(email) >= 3 or " " in email or email.count("@") > 1 or email.count(".") > 1:
             email_error = "Error!"
-
 
 # this is for all the errors together
     if not username_error and not password_error and not verify_error and not email_error:
