@@ -25,20 +25,20 @@ def register():
 
 # this is for the username error
     if not 20 >= len(username) >= 3 or " " in username:
-        username_error = "Error!"
+        username_error = "Please enter a username between 3-20 characters. Make sure it doens't include any spaces!"
 
 # this is for the password error
     if not 20 >= len(password) >= 3 or " " in password:
-        password_error = "Error!"
+        password_error = "Please enter a password between 3-20 characters. Make sure it doesn't include any spaces!"
 
 # this if for the password verify error
     if verify != password:
-        verify_error = "Error!"
+        verify_error = "Passwords need to match!"
 
 # this is for email error
     if email != "":
         if not 20 >= len(email) >= 3 or " " in email or email.count("@") > 1 or email.count(".") > 1:
-            email_error = "Error!"
+            email_error = "Email needs to have between 3-20 characters, without any spaces and only one '@' and '.'!"
 
 # this is for all the errors together
     if not username_error and not password_error and not verify_error and not email_error:
